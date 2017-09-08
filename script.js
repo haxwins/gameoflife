@@ -26,7 +26,7 @@ setTimeout(()=>{
 
 
 
-
+//lel
 /*
 for(let i=0; i<y;i++){
 	var r=document.createElement("tr");
