@@ -1,77 +1,71 @@
 window.onload = () =>{
-var x=30;				//size of a game board
-var y=60;				
+var x=50;				//size of a game board
+var y=50;				
 var cells=[]			//array will be later filled with cells 
 for(var i=0;i<x;i++){	//creating two dimensions array
 	cells[i]=new Array(y);
-}	
+}
+var newCells=cells;
 var el=document.createElement("table");		//creating table tag
-el.id="tab";
-for(var i=0;i<x;i++){						//adding rows based on y value and columns based on x value
-	el = document.createElement("tr");
-	el.id = "tr" + i;
-	document.getElementById("tab").appendChild(el);
-	for(var j=0;j<y;j++){
-		el = document.createElement("th");
-
-		document.getElementById("tr"+i).appendChild(el); 
-		cells[i][j] = el; 					//adding every cell to cells array
+	el.id="tab";
+	document.body.appendChild(el);
+	for(var i=0;i<x;i++){					
+		for(var j=0;j<y;j++){
+			if(Math.random()<0.9||true)
+				cells[i][j]=0;
+			else	
+				cells[i][j]=1;
+		}
+	}
+	cells[16][16]=1;
+	cells[16][17]=1;
+	cells[16][18]=1;
+	buildBoard(cells);
+	
+	
+function buildBoard(currentCells){
+	var myNode = document.getElementById("tab");	//removing old board
+	while (myNode.firstChild) {
+		myNode.removeChild(myNode.firstChild);
+	}
+	for(var i=1;i<x-1;i++){						
+		el = document.createElement("tr");
+		el.id = "tr" + i;
+		document.getElementById("tab").appendChild(el);
+		for(var j=1;j<y-1;j++){
+			el = document.createElement("th");
+			document.getElementById("tr"+i).appendChild(el);
+			if(currentCells[i][j]===1)el.classList.add('alive');
+			else el.classList.remove('alive');
+		}
 	}
 }
-cells[2][3].classList.add('alive');
-cells[10][34].classList.add('alive');
-setTimeout(()=>{
-	cells[10][34].classList.remove('alive');
-},2000);
-
-
-
-//lel
-/*
-for(let i=0; i<y;i++){
-	var r=document.createElement("tr");
-	document.body.appendChild(r);
-	for(let j=0;j<x;j++){
-		create[i][j]=document.createElement("th");
-		document.body.appendChild(create[i][j]);
-	}
-}
-
-
-
-
-
-
-
-
-for(var i=0;i<x;i++){
-	cells[i]=new Array(y);
-}
-console.log(cells);
-var temp=document.getElementsByTagName('th');
-console.log(temp);
-temp[0].style.backgroundColor= "red";
-var counter=0;
-for(var i=0;i<x;i++){
-	for(var j=0;j<y;j++){
-		cells[i][j] = temp[counter];
-		counter++;
+function lifeCycle(){
+	cells=newCells;
+	for(var i=1;i<x-1;i++){						
+		for(var j=1;j<y-1;j++){
+			var neighbors=0;
+			for(var q=-1;q<=1;q++){
+				for(var r=-1;r<=1;r++){
+					neighbors+=cells[i+q][j+r];
+				}
+			}
+			//if(cells[16][16]==1)neighbors-=1;
+			if(cells[i][j]===1 && neighbors<2)			
+				newCells[i][j]=0;
+			else if(cells[i][j]===1 && neighbors>3)		
+				newCells[i][j]=0;
+			else if(cells[i][j]===0 && neighbors===3)	
+				newCells[i][j]=1;
+			else 										
+				newCells[i][j]=cells[i][j];
+			
+		}
 	}
 	
+	buildBoard(newCells)
+	
 }
-console.log(cells);
-
-cells[4][4].style.backgroundColor = "green";
-cells[4][5].style.backgroundColor = "green";
-cells[5][4].style.backgroundColor = "green";
-cells[5][5].style.backgroundColor = "green";
-*/
-
-
-
-
-
-
-
+setInterval(lifeCycle,2000);
 
 }

@@ -1,16 +1,16 @@
 body{
-	background-color:gray;
+	background-color:white;
 }
 th{
-	height:15px;
-	width:15px;
-	border: 1px solid white;
+	height:4px;
+	width:4px;
 }
-table, th, td {
-    border: 1px solid white;
-	border-collapse: collapse;
-	
+table{
+	border-collapse:collapse
+}
+th, td {
+	background-color:white;
 }
 .alive{
-	background-color:red;
+	background-color:black;
 }
