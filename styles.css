@@ -11,6 +11,10 @@ table{
 th, td {
 	background-color:white;
 }
+#life{
+	display: flex;
+	justify-content: center;
+}
 .alive{
 	background-color:black;
 }
