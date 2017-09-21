@@ -39,7 +39,7 @@ board[15][15] = 1;
 board[16][14] = 1;
 board[16][15] = 1;
 ```
-This code will create [Glider](https://en.wikipedia.org/wiki/Glider_(Conway%27s_Life)) that will 'walk' in one direction untill it will interfere other alive cells or escape the board. This example is already in code as a comment.
+This code will create [Glider](https://en.wikipedia.org/wiki/Glider_(Conway%27s_Life)) that will 'walk' in one direction untill it will interfere with others alive cells or leave the board. This example is already in code as a comment.
 Glider looks like this:
 
 ![Image of Glider](https://upload.wikimedia.org/wikipedia/commons/f/f2/Game_of_life_animated_glider.gif)
