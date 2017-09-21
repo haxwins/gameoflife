@@ -9,7 +9,7 @@ Size of a board is set by two values
 var rows = 70;
 var columns = 70;
 ```
-Time between each cycle is defined by timer value(in miliseconds)
+Time between each cycle is defined by timer value (in miliseconds)
 ```
 var timer = 300;
 ```
@@ -24,7 +24,7 @@ Recommended values are from 0.1 to 0.5.
 # Creating own board
 
 You can set own board by define each cells as alive cell. Set thoes in code before life function.
-i and j are co-ordinates of a cell.
+i and j are co-ordinates of a cell
 ```
 board[i][j] = 1;
 ```
