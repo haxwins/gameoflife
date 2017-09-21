@@ -9,27 +9,27 @@ Size of a board is set by two values
 var rows = 70;
 var columns = 70;
 ```
-Time between each cycle is defined by timer value (in miliseconds)
+Time between each cycle is defined by *timer* value (in miliseconds)
 ```
 var timer = 300;
 ```
-The amount of alive cells on first board is defined by randomCells value
+The amount of alive cells on first board is defined by *randomCells* value
 ```
 var randomCells = 0.1;
 ```
 You can set this value from 0 to 1 to define how many alive cells will appears on a first board. Higher value means more alive cells at start but keep in mind that setting this value too high will fill board too much and in next stage most of them will die due to a life cycle [rules](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life#Rules).
-randomCells set to 0 will make a board clean and set to 1 will make the board full of alive cells that will die next stage.
+*randomCells* set to 0 will make a board clean and set to 1 will make the board full of alive cells that will die next stage.
 Recommended values are from 0.1 to 0.5.
 
 # Creating own board
 
 You can set own board by define each cells as alive cell. Set thoes in code before life function.
-i and j are co-ordinates of a cell
+*i* and *j* are co-ordinates of a cell
 ```
 board[i][j] = 1;
 ```
 
-Please remember to set randomCells to 0 so only your cells will appears.
+Please remember to set *randomCells* to 0 so only your cells will appears.
 
 Example in code:
 ``
@@ -39,7 +39,7 @@ board[16][15]=1;
 board[16][14]=1;
 board[15][13]=1;
 ``
-Seting thoes cells as alive will create [Glider](https://en.wikipedia.org/wiki/Glider_(Conway%27s_Life)) that will 'walk' in one direction untill it influence other alive cells or escape the board.
+Seting thoes cells as alive will create [Glider](https://en.wikipedia.org/wiki/Glider_(Conway%27s_Life)) that will 'walk' in one direction untill it will interact other alive cells or escape the board.
 
 You can read about else examples of figures [here](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life#Examples_of_patterns)
 
