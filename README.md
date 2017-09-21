@@ -47,5 +47,5 @@ Glider looks like this:
 You can read about other examples of figures [here](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life#Examples_of_patterns)
 
 # Future features
-  - 'drowing' own board before life cycle starts by clicking on cells you would like to make alive
+  - 'drowing' own board before life cycle starts by clicking on cells you would like to be alive
   - adding own board from file
