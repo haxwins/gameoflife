@@ -23,7 +23,7 @@ Recommended values are from 0.1 to 0.5.
 
 # Creating own board
 
-You can set own board by defining each cells as alive cell. Set thoes in code before *life()* function.
+You can set own board by defining each cells as alive cell. Set those in code before *life()* function.
 *i* and *j* are co-ordinates of a cell
 ```
 board[i][j] = 1;
