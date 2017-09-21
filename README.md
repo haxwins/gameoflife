@@ -39,7 +39,7 @@ board[15][15]=1;
 board[16][14]=1;
 board[16][15]=1;
 ```
-Setting those cells as alive will create [Glider](https://en.wikipedia.org/wiki/Glider_(Conway%27s_Life)) that will 'walk' in one direction untill it will interact other alive cells or escape the board. This example is already in code as a comment.
+This code will create [Glider](https://en.wikipedia.org/wiki/Glider_(Conway%27s_Life)) that will 'walk' in one direction untill it will interact other alive cells or escape the board. This example is already in code as a comment.
 
 You can read about other examples of figures [here](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life#Examples_of_patterns)
 
