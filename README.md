@@ -33,11 +33,11 @@ Please remember to set *randomCells* to 0 so only your cells will appears.
 
 Example in code:
 ```
-board[14][15]=1;
-board[15][13]=1;
-board[15][15]=1;
-board[16][14]=1;
-board[16][15]=1;
+board[14][15] = 1;
+board[15][13] = 1;
+board[15][15] = 1;
+board[16][14] = 1;
+board[16][15] = 1;
 ```
 This code will create [Glider](https://en.wikipedia.org/wiki/Glider_(Conway%27s_Life)) that will 'walk' in one direction untill it will interact other alive cells or escape the board. This example is already in code as a comment.
 Glider looks like this:
