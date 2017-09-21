@@ -2,7 +2,7 @@
 
 Implementation of [Conway's Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life) in javascript with random genereted first state of cells.
 
-#Important values in code
+# Important values in code
 
 Size of a board is set by two values
 ```
@@ -20,3 +20,29 @@ var randomCells = 0.1;
 You can set this value from 0 to 1 to define how many alive cells will appears on a first board. Higher value means more alive cells at start but keep in mind that setting this value too high will fill board too much and in next stage most of them will die due to a life cycle [rules](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life#Rules).
 randomCells set to 0 will make a board clean and set to 1 will make the board full of alive cells that will die next stage.
 Recommended values are from 0.1 to 0.5.
+
+# Creating own board
+
+You can set own board by define each cells as alive cell. Set thoes in code before life function.
+i and j are co-ordinates of a cell.
+```
+board[i][j] = 1;
+```
+
+Please remember to set randomCells to 0 so only your cells will appears.
+
+Example in code:
+``
+board[15][15]=1;
+board[14][15]=1;
+board[16][15]=1;
+board[16][14]=1;
+board[15][13]=1;
+``
+Seting thoes cells as alive will create [Glider](https://en.wikipedia.org/wiki/Glider_(Conway%27s_Life)) that will 'walk' in one direction untill it influence other alive cells or escape the board.
+
+You can read about else examples of figures [here](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life#Examples_of_patterns)
+
+# Future features
+  - 'drowing' own board before life cycle starts
+  - adding own board from file
