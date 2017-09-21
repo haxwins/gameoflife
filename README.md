@@ -23,7 +23,7 @@ Recommended values are from 0.1 to 0.5.
 
 # Creating own board
 
-You can set own board by define each cells as alive cell. Set thoes in code before life function.
+You can set own board by defining each cells as alive cell. Set thoes in code before *life()* function.
 *i* and *j* are co-ordinates of a cell
 ```
 board[i][j] = 1;
@@ -39,10 +39,10 @@ board[16][15]=1;
 board[16][14]=1;
 board[15][13]=1;
 ``
-Seting thoes cells as alive will create [Glider](https://en.wikipedia.org/wiki/Glider_(Conway%27s_Life)) that will 'walk' in one direction untill it will interact other alive cells or escape the board.
+Setting those cells as alive will create [Glider](https://en.wikipedia.org/wiki/Glider_(Conway%27s_Life)) that will 'walk' in one direction untill it will interact other alive cells or escape the board. This example is already in code as a comment.
 
-You can read about else examples of figures [here](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life#Examples_of_patterns)
+You can read about other examples of figures [here](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life#Examples_of_patterns)
 
 # Future features
-  - 'drowing' own board before life cycle starts
+  - 'drowing' own board before life cycle starts by clicking on cells you would like to make alive
   - adding own board from file
