@@ -1,8 +1,8 @@
 # Game of life
-hosted [here](https://haxwins.github.io/gameoflife/)
-
 
 Implementation of [Conway's Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life) in javascript with random genereted first state of cells.
+
+hosted [here](https://haxwins.github.io/gameoflife/)
 
 # Important values in code
 
